@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>Event List</h2>
+  
+  <form  [formGroup]="EventEntryForm">
+    <label for="name"></label>
+    
+    <input type="text"  formControlName='name' id="list"  placeholder="enter list here..">
+    <input type="text"  formControlName='sdate' id="list"  placeholder="start date..">
+    <input type="text"  formControlName='edate' id="list"  placeholder="end date..">
+    <input type="text"  formControlName='time' id="list"  placeholder="time here..">
+    <input type="text"  formControlName='title' id="list"  placeholder="title here..">
+    <input type="text"  formControlName='description' id="list"  placeholder="Description..">
+    <button type="submit" (click)="OnSubmit()"style="align-items: flex-end;"><i class="fa fa-plus-square"></i></button>
+ 
+  
+  
+  
+  
+</form>
+  <div class="container">
+    <table class="table table-striped">
+      <thead>
+        
+      </thead>
+  
+      <tbody>
+        <tr *ngFor="let item of Dataarray let i=index" class="table-primary">
+          <td> {{i+1}} </td>
+          <td> {{item.sdate}}</td>
+          <td> {{item.edate}}</td>
+          <td> {{item.time}}</td>
+          <td> {{item.title}}</td>
+          <td> {{item.description}}</td>
+          
+  
+          <td><a [routerLink]="['/deleteevent/',item.eid]"><i class="fa fa-trash"></i></a></td>
+          
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  

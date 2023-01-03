@@ -1,0 +1,32 @@
+<div class="container">
+    <form  [formGroup]='EventEntryForm'>
+      <div class="container mt-3">
+         
+            <h1>So You are done with this Event??</h1>
+            <table class="table">
+                <thead>
+                    <th>start date </th>
+                    <th>end date </th>
+                    <th>Time </th>
+                    <th>Title </th>
+                    <th>Description </th>
+                    
+  
+                </thead>
+                <tr   class="table-primary">
+                    
+                    <!-- <td> {{Coursedataarray["sdate"]}}</td> -->
+                    <td> {{Coursedataarray["edate"]}}</td>
+                    <td> {{Coursedataarray["time"]}}</td>
+                    <td> {{Coursedataarray["title"]}}</td>
+                    <td> {{Coursedataarray["description"]}}</td>
+  
+                </tr>
+            </table>
+        </div>
+    <div class="buttons">
+      <button class="confirm-button" (click)="onSubmit()" >Yes</button>
+      <button class="cancel-button" [routerLink]="['event']">No</button>
+    </div>
+  </form>
+  </div>
